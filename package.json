@@ -12,11 +12,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "autoprefixer": "^10.0.2",
     "next": "^10.0.1",
     "postcss-import": "^13.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^3.11.0",
     "tailwindcss": "^1.9.6"
-  }
+  },
+  "devDependencies": {}
 }
