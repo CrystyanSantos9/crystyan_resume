@@ -62,7 +62,7 @@ const Index = ({ repos, user }) => {
             <div>
                 <p className="text-xs md:text-base text-center my-8 py-4 border-t-2">
                     Você pode acessar o reposítorio deste projeto em: 
-                    <a href="" className="underline"> https://github.com/CrystyanSantos9/crystyan_resume</a>
+                    <a href="https://github.com/CrystyanSantos9/crystyan_resume" className="underline"> https://github.com/CrystyanSantos9/crystyan_resume</a>
                 </p>
             </div>
             </div>

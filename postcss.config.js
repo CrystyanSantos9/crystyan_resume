@@ -1,4 +1,4 @@
-const purgecss = [
+const purge = [
   "@fullhuman/postcss-purgecss",
   {
     content:["./components/**/*.js","./pages/**/*.js"],
@@ -13,6 +13,6 @@ module.exports = {
       "postcss-import",
       "tailwindcss",
       "autoprefixer",
-      ...(process.env.NODE_ENV === "production"?[purgecss]:[])
+      ...(process.env.NODE_ENV === "production"?[purge]:[])
     ]
   };

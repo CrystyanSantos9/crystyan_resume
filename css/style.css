@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body{
-    background: #ffffff url("/images/waves2.png") left bottom repeat;
+.bg-body{
+    background: #ffffff;
+}
+
+.bg-network{
+    background: url("/images/back-network.png") top left no-repeat;
 }
