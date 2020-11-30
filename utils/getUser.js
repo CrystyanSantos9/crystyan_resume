@@ -1,11 +1,16 @@
 const  getUser = async(username)=>{
     const resUser = await fetch('https://api.github.com/users/'+username)
+    //const userx = await resUser
+   // console.log(userx.status === 403)
+
     const user = await resUser.json()
+
 
 
     const resRepos = await fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
     const origianalrepos = await resRepos.json()
  
+  
 
     const isNotFork = repo => !repo.fork
     const dontShowRepos = ['CrystyanSantos9/next10-handson','CrystyanSantos9/convert_money']

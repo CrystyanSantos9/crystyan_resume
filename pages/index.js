@@ -11,7 +11,7 @@ import Hero from '../components/Hero'
 const Index = ({ repos, user }) => {
     //JSX
     return (
-        <div className="container mx-auto bg-network">
+        <div className="container mx-auto bg-network-left lg:bg-network-right">
             <PageHead />
             <Hero />
             
@@ -67,8 +67,23 @@ const Index = ({ repos, user }) => {
             </div>
             </div>
 
+            <style jsx global>{`
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+`}</style>
+
             
         </div>
+
+        
     )
 }
 
