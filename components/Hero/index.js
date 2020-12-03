@@ -17,13 +17,15 @@ const Hero=()=>{
                            <FaYoutube className="text-5xl md:text-6xl inline-block md:mr-6" />
                            <FiLink className="text-5xl md:text-6xl inline-block" />
                         <br />
-                        <span className="inline-block mt-4">Ou deixe uma mensagem: cryssantos9@gmail.com</span>
+                        <span className="font-bold inline-block mt-4 shadow-inner">Ou deixe uma mensagem: cryssantos9@gmail.com</span>
                        </p>
                     </div>
                     
                 </div>
 
-                <div className="my-4 mb-0 py-12 mx-auto"><img src="/images/avatar_2.png" /></div>
+                <div className="my-5  mb-0 sm:pt-48 mx-8 px-8 md:mx-auto"><img src="/images/avatar3.png" /></div>
+
+               
             </div>
     )
 }

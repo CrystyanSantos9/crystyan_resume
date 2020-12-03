@@ -17,7 +17,7 @@ const Index = ({ repos, user }) => {
             
 
 
-            <div className="bg-white shadow-lg rounded-lg border-orange border-2 pt-16 py-12 px-8 mx-8 md:mx-0 md:px-16">
+            <div className="bg-white shadow-lg rounded-lg border-orange border-2 pt-16  mx-2 px-2 py-12  md:mx-0 md:px-16">
                 <h3 className="text-orange text-4xl font-bold uppercase text-center text-orange">O que eu faço</h3>
                 <p className="text-2xl uppercase py-4 border-dashed border-t">Analista de Sistemas</p>
                 <p className="text-2xl uppercase py-4 border-dashed border-t">Full Stack Developer</p>
@@ -28,7 +28,7 @@ const Index = ({ repos, user }) => {
             <div>
 
             <h3 className="text-4xl font-bold text-center uppercase mt-10 mb-5 text-orange">Educação</h3>
-            <div className="bg-white mx-6 md:mx-0 md:grid md:grid-cols-2 pt-16 leading-none rounded-lg shadow-lg border-orange border-2">
+            <div className="bg-white mx-2 md:mx-0 md:grid md:grid-cols-2 pt-16 leading-none rounded-lg shadow-lg border-orange border-2">
                
                     <div className="bg-white border-dashed border-t md:border-t-0 md:border-l  px-6 mx-6 md:mx-0 md:px-12 py-6">
                         <h4 className="text-lg uppercase font-bold mb-2">Graduação</h4>
@@ -46,7 +46,7 @@ const Index = ({ repos, user }) => {
                 <h3 className="mx-6 md:mx-0 text-4xl font-bold text-center uppercase mt-10 mb-5 text-orange">Contribuições</h3>
                 <p className="text-center">Github stats: <RiGitRepositoryLine  className="inline-block" /> {user.public_repos} / <GoGist  className="inline-block"/> {user.public_gist} / <FiUsers  className="inline-block"/> {user.followers} </p>
 
-                <div className="md:grid md:grid-cols-3 md:gap-2 md:my-6 rounded-lg border-orange border-2">
+                <div className="mx-2 md:grid md:grid-cols-3 md:gap-2 md:my-6 rounded-lg border-orange border-2">
                         {repos.map(repo => {
                         return (
                             <div key={repo.id} className="my-3 md:my-0 rounded bg-white shadow-lg p-4 hover:shadow-md">
