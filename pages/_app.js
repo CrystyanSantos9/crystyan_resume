@@ -1,13 +1,14 @@
 import React from 'react'
 import App from 'next/app'
 import '../css/styles.css'
+import '../css/toggleButton.css'
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
       <React.Fragment>
-<Component {...pageProps} />
+          <Component {...pageProps} />
       </React.Fragment>
     
     )
