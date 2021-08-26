@@ -3,14 +3,18 @@
 @import "tailwindcss/utilities";
 
 
-.bg-body{
-    background: #ffffff;
+/* .bg-body{
+    background-color: #000000;
 }
 
-.bg-network-left{
+/* .bg-network-left{
     background: url("/images/back-network.png") top left no-repeat;
 }
 
 .bg-network-right{
     background: url("/images/back-network.png") top right no-repeat;
+} */ 
+
+body{
+    background-color: rgba(255, 255, 255, 0.5);
 }

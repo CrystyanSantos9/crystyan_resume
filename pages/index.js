@@ -11,59 +11,58 @@ import Hero from '../components/Hero'
 const Index = ({ repos, user }) => {
     //JSX
     return (
-        <div className="container mx-auto bg-network-left lg:bg-network-right">
+        <div className="font-sans">
             <PageHead />
             <Hero />
             
 
 
-            <div className="bg-white shadow-lg rounded-lg border-orange border-2 pt-16  mx-2 px-2 py-12  md:mx-0 md:px-16">
-                <h3 className="text-orange text-4xl font-bold uppercase text-center text-orange">O que eu faço</h3>
-                <p className="text-2xl uppercase py-4 border-dashed border-t">Analista de Sistemas</p>
-                <p className="text-2xl uppercase py-4 border-dashed border-t">Full Stack Developer</p>
-                <p className="text-2xl uppercase py-4 border-dashed border-t">Analista NOC</p>
-                <p className="text-2xl uppercase py-4 border-dashed border-t">Técnico em eletrônica</p>
+            <div className="text-center">
+                <h3 className="text-center text-4xl font-extrabold border-b-2 border-yellow rounded-b-md mx-10 my-5">Educação</h3>
+                <p className="text-xl my-2">Análise e Desenvolvimento de Sistemas</p>
+                <p className="text-xl my-2">Ensino médio Técnico em Eletrônica</p>
             </div>
 
-            <div>
-
-            <h3 className="text-4xl font-bold text-center uppercase mt-10 mb-5 text-orange">Educação</h3>
-            <div className="bg-white mx-2 md:mx-0 md:grid md:grid-cols-2 pt-16 leading-none rounded-lg shadow-lg border-orange border-2">
+            <div className="text-center">
+                <h3 className="text-center text-4xl font-extrabold border-b-2 border-yellow rounded-b-md mx-10 my-5">Conhecimentos</h3>
+                <p className="text-xl my-2">Conceitos básicos sobre Docker e utilização de containers para criação de APis e micro serviços</p>
+                <p className="text-xl my-2">Conceitos básicos sobre Kubernetes e gerenciamento de containers </p>
+                <p className="text-xl my-2">Criação de Apis utilizando Runtime NodeJS</p>
+                <p className="text-xl my-2">Criação de páginas web SPA utilizando REACT (Funcional)</p>
+                <p className="text-xl my-2">Criação de páginas web SPA utilizando NEXT JS (Classes)</p>
+                <p className="text-xl my-2">Criação de aplicações Mobile com React-Native (Classes)</p>
+                <p className="text-xl my-2">Conceitos básicos sobre AWS e Plataformas de Aplicação em Nuvens </p>
+                
+                <p className="text-xl my-2">Criação de processos CI/CD utilizando Jenkins </p>
+                
                
-                    <div className="bg-white border-dashed border-t md:border-t-0 md:border-l  px-6 mx-6 md:mx-0 md:px-12 py-6">
-                        <h4 className="text-lg uppercase font-bold mb-2">Graduação</h4>
-                        <p className=" text-2xl uppercase">Análise e Desenvolvimento de Sistemas</p>
-                        <span className=" text-lg normal-case font-bold">Universidade Veiga de Almenida</span>
-                    </div>
-                    <div className="bg-white border-dashed border-t md:border-t-0 md:border-l  px-6 mx-6 md:mx-0 md:px-12 py-6">
-                    <h4 className="text-lg uppercase font-bold mb-2">Ensino Técnico</h4>
-                    <p className=" text-2xl uppercase">Técnico em eletrônica</p>
-                    <span className=" text-lg normal-case font-bold">Escola Graham Bell</span>
-                </div>
-             
             </div>
-            <div>
-                <h3 className="mx-6 md:mx-0 text-4xl font-bold text-center uppercase mt-10 mb-5 text-orange">Contribuições</h3>
-                <p className="text-center">Github stats: <RiGitRepositoryLine  className="inline-block" /> {user.public_repos} / <GoGist  className="inline-block"/> {user.public_gist} / <FiUsers  className="inline-block"/> {user.followers} </p>
 
-                <div className="mx-2 md:grid md:grid-cols-3 md:gap-2 md:my-6 rounded-lg border-orange border-2">
+            <div>
+            <div className="text-center flex-1">
+            <h3 className="text-center text-4xl font-extrabold border-b-2 border-yellow rounded-b-md mx-10 my-5">Github</h3>
+                <p className="text-center border-yellow border bg-red-400 mx-10 rounded-2xl">Github stats: <RiGitRepositoryLine  className="inline-block" /> {user.public_repos} / <GoGist  className="inline-block"/> {user.public_gist} / <FiUsers  className="inline-block"/> {user.followers} </p>
+
+     
                         {repos.map(repo => {
                         return (
-                            <div key={repo.id} className="my-3 md:my-0 rounded bg-white shadow-lg p-4 hover:shadow-md">
-                                <h3 className="font-bold hover:underline"><a href={'https://github.com/'+ repo.full_name}>{repo.full_name}</a></h3>
-                                <p className="">Language: {repo.language} / <GoStar className="inline-block" /> Stars:{repo.stargazers_count}</p>
+                            <div key={repo.id} className="bg-gray-200 border px-5 my-3 mx-2 rounded-lg rounded-r-sm">
+                                <p className="break-all"><a href={'https://github.com/'+ repo.full_name}>{repo.full_name}</a></p>
+                                {/* <p className="">Language: {repo.language} / <GoStar className="" /> Stars:{repo.stargazers_count}</p> */}
+                                <p className="">Language: {repo.language}</p>
+                                <p>Última atualização: {repo.updated_at}</p>
                                 <p></p>
                         
                             </div>
                         )
                     })}
-                </div>
+         
             </div>
-            <div>
-                <p className="text-xs md:text-base text-center my-8 py-4 border-t-2">
+            <div className="flex-2 justify-center text-center py-1 px-1">
+                <p className="text-yellow-300 font-semibold">
                     Você pode acessar o reposítorio deste projeto em: 
-                    <a href="https://github.com/CrystyanSantos9/crystyan_resume" className="underline"> https://github.com/CrystyanSantos9/crystyan_resume</a>
                 </p>
+                <p className="text-xs text-align: center"><a className="break-all" href="https://github.com/CrystyanSantos9/crystyan_resume" className="underline text-align: center"> https://github.com/CrystyanSantos9/crystyan_resume</a></p>
             </div>
             </div>
 

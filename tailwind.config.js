@@ -1,12 +1,13 @@
+
 module.exports = {
     theme:{
         fontFamily:{
-            sans:['"Roboto"']
+            sans:['system-ui']
         },
         extend:{
             colors:{
                 orange: '#F05E7B',
-                yellow: '#FFEA07',
+                yellow: '#FF9556',
                 gold: '#C5B503'
             }
         },

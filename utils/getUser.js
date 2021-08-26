@@ -1,3 +1,7 @@
+import moment from "moment"
+moment.locale('pt-br');  
+
+
 const  getUser = async(username)=>{
     const resUser = await fetch('https://api.github.com/users/'+username)
     //const userx = await resUser
@@ -19,7 +23,7 @@ const  getUser = async(username)=>{
         id:repo.id,
         full_name:repo.full_name,
         language:repo.language,
-        stargazers_count: repo.stargazers_count
+        updated_at: moment(repo.updated_at).format('LL'),
     })
     const repos = origianalrepos
                     .filter(isNotFork)
